@@ -1,0 +1,48 @@
+h2 {
+    margin-top: 60px;
+}
+
+body {
+    margin: 60px;
+    position: relative;
+}
+
+.default-box {
+    /* width: 100px; */
+    height: 100px;
+    background-color: whitesmoke;
+    border: 1px solid #333;
+}
+
+.problem-description {
+    font-size: 18px;
+
+}
+
+.problem-container {
+    width: 100%;
+    min-width: 100%;
+    padding-left: 80px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.p1-box {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+nav {
+    background-color: whitesmoke;
+}
+
+nav a {
+    padding: 8px 20px;
+}
+
+footer {
+    min-height: 40px;
+    clear:both;
+}

@@ -1,0 +1,43 @@
+#p2-container {
+	color: #555;
+}
+
+#p2-container strong {
+	color: red;
+}
+
+#p2-container ul:last-of-type strong {
+	text-decoration: underline;
+}
+
+#p2-container ul li:nth-child(even) {
+	background-color: #ddd;
+}
+
+#p2-container p:last-child {
+	color: #ff9800;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+}
+nav a {
+	display: none;
+}
+.show-nav a {
+	display: block;
+}
+
+#p4-button-wrapper a {
+	background-color: #008bff;
+	color: white;
+	padding: 14px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#p4-button-wrapper a:not(.stop-hover):hover {
+	filter: brightness(80%);
+	/* makes the  background color 20% darker */
+}

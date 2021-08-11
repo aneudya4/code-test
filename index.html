@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Frontier Communications: Front-End Coding Challenge</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="base.css" />
+		<link rel="stylesheet" href="your-styles.css" />
+	</head>
+
+	<body>
+		<h1>CSS/JavaScript Problems</h1>
+		<p class="problem-description">
+			Each of the problems below will require styling something or using
+			JavaScript to make it perform some action. These are not meant to require
+			complex solutions and in most cases, there is a fairly simple approach
+			that can be taken. All problems, except for problem 1, must be solved
+			without changing the provided HTML or the contents of base.css. Please
+			comment your code where appropriate. When complete, please zip and upload
+			all files to a file sharing site like Google Drive and share the link with
+			your recruiter.
+		</p>
+
+		<h2>Problem 1 - Bootstrap</h2>
+
+		<!-- =========== DO NOT EDIT ABOVE THIS LINE  =========== -->
+
+		<p class="problem-description">
+			This problem requires updating the HTML with Bootstrap 4 utility classes
+			from index.html. Solving this problem using only Bootstrap utility classes
+			will result in a much higher score.
+		</p>
+
+		<ol>
+			<li>Center the numbers in the boxes both vertically and horizontally</li>
+			<li>
+				Center the container on the screen (hint: there is 80px of left padding
+				currently; remove or adjust the container padding via Bootstrap utility
+				classes)
+			</li>
+			<li>
+				For mobile - stack the boxes vertically with a small gap between them
+				<a href="Q1-mobile.png" target="_blank">see mock-up</a>
+			</li>
+			<li>
+				For desktop - the boxes should be displayed in a row with the center box
+				having twice the width of the other boxes and no gaps between them. The
+				#1 box should be left aligned, while the #3 box right aligned -
+				<a href="Q1-desktop.png" target="_blank">see mock-up</a>
+			</li>
+		</ol>
+
+		<div id="p1-container" class="problem-container container p-0">
+			<div id="p1-box-container" class="d-flex flex-wrap">
+				<div
+					id="p1-box1"
+					class="
+						default-box
+						p1-box
+						col-md-3
+						mb-2 mb-md-0
+						d-flex
+						justify-content-md-start justify-content-center
+						align-items-center
+					"
+				>
+					1
+				</div>
+				<div
+					id="p1-box2"
+					class="
+						default-box
+						p1-box
+						col-md-6
+						mb-2 mb-md-0
+						d-flex
+						align-items-center
+						justify-content-center
+					"
+				>
+					2
+				</div>
+				<div
+					id="p1-box3"
+					class="
+						default-box
+						p1-box
+						d-flex
+						col-md-3
+						align-items-center
+						justify-content-md-end justify-content-center
+					"
+				>
+					3
+				</div>
+			</div>
+		</div>
+
+		<!-- =========== DO NOT EDIT BELOW THIS LINE  =========== -->
+
+		<h2>Problem 2 - CSS Specificity</h2>
+		<p class="problem-description">
+			Below you will find blocks of text. Apply the following rules by only
+			updating the CSS file.
+		</p>
+		<ol>
+			<li>All text in this problem should default to a color of #555</li>
+			<li>Bolded items in all lists should be red.</li>
+			<li>Bolded items in list group 2 should also have an underline.</li>
+			<li>
+				The background color of the even-ordered list items should be #ddd.
+			</li>
+			<li>For the last paragraph the font color should be #ff9800.</li>
+		</ol>
+
+		<div id="p2-container" class="problem-container">
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+				consectetur nostrum rem assumenda! Doloremque voluptatum ullam at dolore
+				repellat! Ex assumenda, iste enim in dolorum fuga beatae magnam sequi
+				adipisci. Aliquam, magni dignissimos, vero cumque itaque illum incidunt
+				quam veniam quos suscipit hic delectus assumenda adipisci unde porro
+				molestiae dolor recusandae earum neque soluta vitae? Quidem, iste!
+				Quaerat, voluptatibus porro!
+			</p>
+
+			<ul id="list-group1" class="list-items">
+				<li>first item</li>
+				<li>second item</li>
+				<li>third item</li>
+				<li>fourth <strong>bolded</strong> item</li>
+			</ul>
+
+			<ul id="list-group2" class="list-items">
+				<li>first item</li>
+				<li>second item</li>
+				<li>third <strong>bolded</strong> item</li>
+				<li>fourth item</li>
+			</ul>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+				consectetur nostrum rem assumenda! Doloremque voluptatum ullam at dolore
+				repellat! Ex assumenda, iste enim in dolorum fuga beatae magnam sequi
+				adipisci. Aliquam, magni dignissimos, vero cumque itaque illum incidunt
+				quam veniam quos suscipit hic delectus assumenda adipisci unde porro
+				molestiae dolor recusandae earum neque soluta vitae? Quidem, iste!
+				Quaerat, voluptatibus porro!
+			</p>
+		</div>
+
+		<h2>Problem 3 - Native CSS/JS</h2>
+		<p class="problem-description">
+			Below you will find a rudimentary navigation bar and a button labeled
+			"dropdown." Using JavaScript and native CSS only (without changing the
+			HTML), turn the navigation bar into a dropdown menu that appears and
+			disappears below the button when it is clicked.
+		</p>
+		<div id="p3-container" class="problem-container">
+			<button id="p3-button">dropdown</button>
+			<nav id="p3-nav">
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Portfolio</a>
+				<a href="#">Resources</a>
+				<a href="#">Pizza places in Irving</a>
+				<a href="#">Help</a>
+			</nav>
+		</div>
+
+		<h2>Problem 4 - Native CSS/JS</h2>
+		<p class="problem-description">
+			Make the below link look like a button, with the following
+			characteristics: (1) there should be 14px of space around the text to the
+			border of the button, (2) it should have rounded corners, and (3) clicking
+			the button should change its text from "click me!" to "clicked!"
+		</p>
+		<p class="problem-description">
+			Additionally, the button's initial color should be #008bff with white
+			text. When the mouse pointer is over the button, the color should be 20%
+			darker. When the button has been clicked, the color should be #eee with
+			black text.
+		</p>
+		<div id="p4-container" class="problem-container">
+			<div id="p4-button-wrapper">
+				<a id="p4-button">click me!</a>
+			</div>
+		</div>
+
+		<footer></footer>
+		<script src="your-scripts.js"></script>
+	</body>
+</html>

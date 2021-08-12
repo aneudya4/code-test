@@ -1,32 +1,41 @@
-const toggleNavBar = () => {
-    const dropdownBtn = document.querySelector('#p3-button')
-
-    dropdownBtn.addEventListener('click', (event) => {
-
-        document.querySelector('nav').classList.toggle('show-nav')
-
-    })
-}
+const init = () => {
+    const LightenDarkenColor = (color, amount) => {
+        return '#' + color.replace(/^#/, '').replace(/../g, color => ('0' + Math.min(255, Math.max(0, parseInt(color, 16) + amount)).toString(16)).substr(-2));
 
 
+        // generates a color lighter(positive amount) or darker(negative amount) by amount
+    };
 
-const changeBtn = () => {
-    const clickMebtn = document.querySelector('#p4-button-wrapper a ')
-    clickMebtn.addEventListener('click', (event) => {
-        event.target.classList.add('stop-hover')
-        // PREVENTS the hover effect to make button 20% darker after clicked, REMOVE IF NOT DESIRED BEHAVIOUR 
-        event.target.innerText = 'clicked!'
-        event.target.style.backgroundColor = '#eee'
-        event.target.style.color = 'black'
+    const toggleNavBarHandler = (event) => {
+        event.target.nextElementSibling.classList.toggle('show-nav');
+    };
 
-    })
+    const btnClickHandler = (event) => {
+        event.target.innerText = 'clicked!';
+        event.target.classList.add('clicked');
+    };
 
-}
+    const bntMouseInEffect = (event) => {
+        event.target.style.backgroundColor = LightenDarkenColor('#008bff', -20);
+    };
 
+    const btnMouseOutEffect = (event) => {
+        if (event.target.classList.contains('clicked')) {
+            event.target.style.backgroundColor = '#eee';
+        } else {
+            event.target.style.backgroundColor = '#008bff';
+        }
+    };
 
+    const clickMebtn = document.querySelector('#p4-button-wrapper a ');
+    const dropdownBtn = document.querySelector('#p3-button');
 
-window.addEventListener('load', (event) => {
-    toggleNavBar();
-    changeBtn();
-    // run functions on  page load 
+    dropdownBtn.addEventListener('click', toggleNavBarHandler);
+    clickMebtn.addEventListener('click', btnClickHandler);
+    clickMebtn.addEventListener('mouseover', bntMouseInEffect);
+    clickMebtn.addEventListener('mouseleave', btnMouseOutEffect);
+};
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    init();
 });

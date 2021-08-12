@@ -37,7 +37,10 @@ nav a {
 	cursor: pointer;
 }
 
-#p4-button-wrapper a:not(.stop-hover):hover {
-	filter: brightness(80%);
-	/* makes the  background color 20% darker */
+#p4-button-wrapper a.clicked {
+	background-color: #eee;
+	color: black;
+	pointer-events: none;
+	/* when btn is clicked and mouse still over btn background color stays as #008bff until mouse leaves pointer-events none fixed the issue*/
+	/* instructions were not clear on  mouse over effect applying to the btn after clicked */
 }
